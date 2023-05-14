@@ -1,25 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <nav-bar />
+<!--  <img alt="Vue logo" src="./assets/logo.png">-->
   <page-home />
 </template>
 
 <script>
 import PageHome from "@/components/PageHome.vue";
+import NavBar from "@/components/common/NavBar.vue";
 export default {
   name: 'App',
   components: {
-    PageHome
+    PageHome,
+    NavBar
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

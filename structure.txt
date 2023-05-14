@@ -1,0 +1,37 @@
+src/
+  assets/
+    logo.png
+  components/
+    common/
+      Header.vue
+      Footer.vue
+      Sidebar.vue
+      ...
+    Button.vue
+    Input.vue
+    Checkbox.vue
+    ...
+  layouts/
+    DefaultLayout.vue
+    AdminLayout.vue
+    ...
+  pages/
+    Home.vue
+    About.vue
+    Contact.vue
+    ...
+  plugins/
+    axios.js
+    vue-router.js
+    ...
+  router/
+    index.js
+  store/
+    index.js
+    modules/
+      auth.js
+      cart.js
+      ...
+  App.vue
+  main.js
+
