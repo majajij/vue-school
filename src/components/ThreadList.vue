@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1 class="text-center font-bold text-xl">Welcome to the forum</h1>
-    <div class="bg-primary px-2 py-2 rounded-bl-3xl font-bold pl-5 text-white border">
+    <div class="bg-primary px-2 py-2 rounded-bl-3xl font-bold pl-5 text-white">
       Threads
     </div>
-    <div class="border odd:bg-gray-200 rounded-2xl even:bg-secondary m-2 p-4" v-for="thread in threads" :key="thread.id">
+    <div class="odd:bg-gray-200 rounded-2xl even:bg-secondary m-2 p-4" v-for="thread in threads" :key="thread.id">
       <div class="grid grid-cols-4 gap-4">
         <div class="col-span-2">
           <div class="flex flex-col">

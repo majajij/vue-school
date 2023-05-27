@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex bg-white mx-2 my-2 p-3 rounded-2xl">
+    <div class="flex bg-white my-2 p-3 rounded-2xl">
       <div class="flex w-2/12 flex-col justify-center items-center text-center">
         <div class="text-teal-600 truncate w-20">{{userById(post.userId).name}}</div>
         <div class="flex -space-x-2 overflow-hidden">
