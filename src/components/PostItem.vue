@@ -10,9 +10,9 @@
       </div>
       <div class="flex-initial w-10/12 px-2 py-2">
         <p>{{post.text}}</p>
-        <span class="float-right mt-2 italic" :title="humanFriendlyDate(post.publishedAt)">
-          {{ diffForHumans(post.publishedAt) }}
-        </span>
+        <div class="float-right mt-2">
+          <app-date :timestamp="post.publishedAt" />
+        </div>
       </div>
     </div>
   </div>
@@ -20,11 +20,6 @@
 
 <script>
 import sourceData from "@/data.json";
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
-import localizedFormat from 'dayjs/plugin/localizedFormat';
-dayjs.extend(relativeTime)
-dayjs.extend(localizedFormat)
 export default {
   name: 'PostItem',
   props:{
@@ -41,12 +36,6 @@ export default {
   methods:{
     userById(userId){
       return this.users.find(p => p.id === userId)
-    },
-    diffForHumans(timestamp){
-      return dayjs.unix(timestamp).fromNow();
-    },
-    humanFriendlyDate(timestamp){
-      return dayjs.unix(timestamp).format('llll');
     }
   }
 }

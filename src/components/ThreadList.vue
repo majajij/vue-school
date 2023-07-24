@@ -11,8 +11,8 @@
             <div class="text-primary">
               <router-link :to="{name: 'ThreadShow', params: {id: thread.id}}">{{thread.title}}</router-link>
             </div>
-            <div>
-              By <span class="text-primary">{{userById(thread.userId).name}}</span>, {{thread.publishedAt}}
+            <div class="flex flex-row">
+              By <span class="ml-1 text-primary">{{userById(thread.userId).name}}</span>, <app-date class="ml-1" :timestamp="thread.publishedAt" />
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
           </div>
           <div class="flex flex-col">
             <div class="font-bold text-primary truncate w-20">{{userById(thread.userId).name}}</div>
-            <div>{{thread.publishedAt}}</div>
+            <app-date :timestamp="thread.publishedAt" />
           </div>
         </div>
       </div>
@@ -53,7 +53,6 @@
 
 <script>
 import sourceData from "@/data.json";
-
 export default {
   data (){
     return {
