@@ -1,30 +1,24 @@
 <template>
-  <div class="mx-10 sm:mx-5 md:mx-20 lg:mx-30">
-    <div class="">
-      <title-text title="Welcome to the forum"/>
-      <thread-list :threads="threads"/>
-    </div>
+  <div class="mx-4">
+   <forum-list :forums="forums"/>
   </div>
-</template>
+ </template>
 
-<script>
-import sourceData from '@/data.json'
-import ThreadList from "@/components/ThreadList.vue";
-import TitleText from '@/components/TitleText.vue';
-export default {
-  components: {
-    ThreadList,
-    TitleText
-  },
-  name: "PageHome",
-  data (){
-    return {
-      threads: sourceData.threads,
-    }
-  }
-}
-</script>
-
-<style scoped>
-
-</style>
+ <script>
+ import ForumList from '@/components/ForumList.vue'
+ import DataSource from '@/data.json'
+ export default {
+ props:{
+   id:{
+     type: String,
+     required: true
+   }
+ },
+ components:{ForumList},
+ data(){
+ return {
+   forums : DataSource.forums
+ }
+ }
+ }
+ </script>
