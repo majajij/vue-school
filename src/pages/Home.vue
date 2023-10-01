@@ -1,15 +1,20 @@
 <template>
   <div class="mx-10 sm:mx-5 md:mx-20 lg:mx-30">
-    <thread-list/>
+    <div class="">
+      <title-text title="Welcome to the forum"/>
+      <thread-list/>
+    </div>
   </div>
 </template>
 
 <script>
 import sourceData from '@/data.json'
 import ThreadList from "@/components/ThreadList.vue";
+import TitleText from '@/components/TitleText.vue';
 export default {
   components: {
-    ThreadList
+    ThreadList,
+    TitleText
   },
   name: "PageHome",
   data (){
