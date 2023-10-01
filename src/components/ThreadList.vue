@@ -53,10 +53,15 @@
 <script>
 import sourceData from "@/data.json";
 export default {
+  props:{
+    threads:{
+      type: Array,
+      required: true,
+    },
+  },
   data (){
     return {
       posts: sourceData.posts,
-      threads: sourceData.threads,
       users: sourceData.users
     }
   },
